@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 import model.entities.CarRental;
 import model.entities.Vehicle;
-import model.services.BrazilTaxService;
 import model.services.RentalService;
+import model.services.USTaxService;
 
 public class Main {
 
@@ -33,7 +33,7 @@ public class Main {
 		double pricePerDay = sc.nextDouble();
 		sc.nextLine();
 		
-		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
+		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new USTaxService());
 		rentalService.processInvoice(carRental);
 		
 		System.out.println("FATURA:");

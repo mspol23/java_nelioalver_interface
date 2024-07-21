@@ -1,7 +1,9 @@
 package model.services;
 
-public interface TaxService {
+public class TaxService {
 
-	double tax(double amount);
-	
+	public Double tax(double amount) {
+		return null;
+	}
+
 }

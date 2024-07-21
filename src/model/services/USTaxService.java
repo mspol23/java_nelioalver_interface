@@ -1,14 +1,15 @@
 package model.services;
 
-public class BrazilTaxService extends TaxService {
-	
+public class USTaxService extends TaxService {
+
 	@Override
 	public Double tax (double basicPayment) {
+
 		if(basicPayment <= 100.0) {
-			return basicPayment * 0.2;
+			return basicPayment * 0.5;
 		}
 		else {
-			return basicPayment * 0.15;
+			return basicPayment * 0.3;
 		}
 	}
 }
